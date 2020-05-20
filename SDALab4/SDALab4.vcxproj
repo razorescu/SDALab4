@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="app.cpp" />
+    <ClCompile Include="P12.cpp" />
     <ClCompile Include="TernaryHeap.cpp" />
     <ClCompile Include="TestP12.cpp" />
   </ItemGroup>

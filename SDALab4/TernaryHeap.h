@@ -12,8 +12,10 @@ class TernaryHeap {
 	private:
 		int cap;
 		int len;
-		TElem* elems;
+		
 		Relation rel;
+
+		
 	public:
 		//constructor
 		TernaryHeap(Relation r);
@@ -26,4 +28,9 @@ class TernaryHeap {
 
 		//doubles the capacity of the heap
 		void resize();
+
+		//destructor
+		~TernaryHeap();
+
+		TElem* elems;
 };

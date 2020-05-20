@@ -18,6 +18,16 @@ void TernaryHeap::add(TElem e) {
 	/*
 	adds an element to the list according to the existing relation
 	*/
+	if (len == cap - 1) { //heap needs to be enlarged
+		resize();
+	}
+	int leaf = len;
+	len += 1;
+	while (leaf != 0 && rel(elems[(leaf - 1) / 3], e)) {
+		elems[leaf] = elems[(leaf - 1) / 3]; //switching the values of the elements in the heap
+		leaf = (leaf - 1) / 3; //carrying on to the father
+	}
+	elems[leaf] = e;
 }
 
 int TernaryHeap::size() const {
@@ -38,4 +48,11 @@ void TernaryHeap::resize() {
 	delete[] elems;
 	elems = temp;
 	cap = cap * 2;
+}
+
+TernaryHeap::~TernaryHeap() {
+	/*
+	destructor
+	*/
+	delete[] elems;
 }
