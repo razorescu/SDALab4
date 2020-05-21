@@ -5,6 +5,6 @@
 using namespace std;
 
 int main() {
-	testTemp();
+	testP12();
 	cout << "Tests done!\n";
 }

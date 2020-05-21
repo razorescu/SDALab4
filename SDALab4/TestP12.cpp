@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <assert.h>
 #include <iostream>
-#include "TernaryHeap.h"
 
 using namespace std;
 
@@ -65,20 +64,4 @@ void testP12() {
 	testRel(r1);
 	cout << "Test r2" << endl;
 	testRel(r2);
-}
-
-void testTemp() {
-	TernaryHeap heap(r2);
-	for (int i = 0; i < 16; i++)
-	{
-		int val = (5 + 7 * i) % 16;
-		heap.add(val);
-		cout << val << " ";
-	}
-
-	cout << endl;
-
-	for (int i = 0; i < heap.size(); i++) {
-		cout << heap.elems[i] << " ";
-	}
 }
